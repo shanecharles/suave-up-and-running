@@ -1,0 +1,5 @@
+source https://nuget.org/api/v2
+
+nuget Suave
+nuget fake
+nuget FSharp.Compiler.Service

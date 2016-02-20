@@ -1,0 +1,10 @@
+{
+  "name": "Suave up and running",
+  "description": "Empty suave web app",
+  "website": "http://suave.io/",
+  "repository": "https://github.com/shanecharles/suave-up-and-running",
+  "logo": "https://raw.githubusercontent.com/SuaveIO/suave/gh-pages/images/logo.gif",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/SuaveIO/mono-script-buildpack.git"
+  }
+}

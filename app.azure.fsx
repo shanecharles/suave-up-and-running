@@ -14,7 +14,7 @@ let serverConfig =
 
   { Web.defaultConfig with
       homeFolder = Some __SOURCE_DIRECTORY__
-      logger = Logging.Loggers.saneDefaultsFor Logging.LogLevel.Warn
-      bindings = [ Suave.Http.HttpBinding.mk HTTP (Net.IPAddress.Parse("127.0.0.1")) port ] }
+      //logger = Logging.Loggers.saneDefaultsFor Logging.LogLevel.Warn
+      bindings = [ Suave.Http.HttpBinding.create HTTP (Net.IPAddress.Parse("127.0.0.1")) port ] }
 
 Web.startWebServer serverConfig app

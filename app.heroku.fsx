@@ -11,7 +11,7 @@ let serverConfig =
   let port = uint16 (Environment.GetEnvironmentVariable("PORT"))
   { Web.defaultConfig with
       homeFolder = Some __SOURCE_DIRECTORY__
-      logger = Logging.Loggers.saneDefaultsFor Logging.LogLevel.Warn
-      bindings = [ HttpBinding.mk HTTP (Net.IPAddress.Parse("0.0.0.0")) port ] }
+      //logger = Logging.LoggingConfig.getLogger .saneDefaultsFor Logging.LogLevel.Warn
+      bindings = [ HttpBinding.create HTTP (Net.IPAddress.Parse("0.0.0.0")) port ] }
 
 Web.startWebServer serverConfig app

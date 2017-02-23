@@ -58,7 +58,7 @@ let currentApp = ref (fun _ -> async { return None })
 let serverConfig =
   { defaultConfig with
       homeFolder = Some __SOURCE_DIRECTORY__
-//      logger = Logging.Loggers.saneDefaultsFor Logging.LogLevel.Debug
+      //logger = Logging.Loggers.saneDefaultsFor Logging.LogLevel.Debug
       bindings = [ HttpBinding.create HTTP  (Net.IPAddress.Parse("127.0.0.1")) 8083us] }
 
 let reloadAppServer () =
